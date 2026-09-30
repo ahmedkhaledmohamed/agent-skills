@@ -10,6 +10,7 @@ Sanitized, portable copies of personal agent workflows. This repository is a sep
 - Evidence and delivery: messaging claims, portfolio reconciliation, knowledge-base workflows, catalog publishing, and prototypes.
 - Evaluation: artifact review, explicit feedback, calibration, regression analysis, and reporting.
 - Runtime workflows: scoped Cursor guidance, code review, and in-session monitoring.
+- Evidence-backed specifications: inventory an owned portfolio, maintain current-state and intended-behavior records, review source drift, and assess stakeholder gaps with [`evidence-backed-specs`](skills/evidence-backed-specs/SKILL.md).
 
 Each skill lives under `skills/<name>/SKILL.md`. Cursor-specific skills target Cursor, even when read by another agent. The evaluation skills require the separate personal evaluation framework with `core/` and `plugin/rubrics/`; set `AI_EVALS_FRAMEWORK_DIR` to its checkout. That framework and its dependencies are not bundled here.
 
