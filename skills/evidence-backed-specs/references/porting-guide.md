@@ -7,11 +7,11 @@ This package creates a reusable coordinator skill, a portable record contract, a
 1. **Source readers:** authenticated, read-only access to the team's code, APIs, datasets, model registry, configuration, and version history. Record the identity and completeness of each retrieval; use immutable revisions where possible.
 2. **Ownership reader:** current owner declarations plus a named person or process to resolve disputed boundaries. Older docs and existing catalogs are candidates, not final ownership evidence.
 3. **Intent readers:** approved contracts, decisions, policies, and current goals or stakeholder requests, each with status, owner, date, and provenance.
-4. **Artifact store:** a versioned repository or database for canonical records and source baselines. Add schema and cross-reference validation, with generated reader views if useful.
+4. **Artifact store:** a versioned repository or database for canonical records, feature homes, historical deliverables, source assessments, and source baselines. Add schema and cross-reference validation, with generated reader views if useful.
 5. **Contribution path:** local review, approval, publication, and rollback mechanism. Keep approval authority explicit.
 6. **Optional scheduler:** a durable runner only if ongoing unattended detection is wanted and authorized. It needs scoped credentials, a queue, deduplication, failure reporting, and a human or explicitly delegated decision point.
 
-Do not copy an organization's source material or credential configuration into this skill. Instantiate a local configuration or manifest in the target environment. Start with one representative path that crosses the relevant source types, confirm the record shape and reviewer roles, then expand the census to the full boundary. A pilot validates the method; it is not proof of portfolio coverage.
+Do not copy an organization's source material or credential configuration into this skill. Instantiate a local configuration or manifest in the target environment. Start with one representative feature and an end-to-end path that crosses the relevant source types, confirm the record shape and reviewer roles, then expand the owner, feature, and source censuses to the full boundary. A pilot validates the method; it is not proof of portfolio coverage. The [architecture](architecture.md) and [example bundle](../examples/bundle.json) give a local file layout; `python3 skills/evidence-backed-specs/scripts/validate_bundle.py skills/evidence-backed-specs/examples/bundle.json` checks its declared denominator and record links.
 
 ## Reuse and agent roles
 
@@ -39,6 +39,6 @@ Create a domain-specific adapter or script only when the target source system ne
 
 ## First operating cycle
 
-Define the boundary and decision owners. Create the manifest and unresolved-source queue. Review one path end to end to calibrate records, then complete the source-unit census and batch reviews. Publish a dated coverage report that exposes unreviewed units and unapproved requirements. Compare one real goal or customer expectation to the reviewed path and log the gap decision. Only then turn on recurring drift detection; it should update the queue, not claim automatic spec correctness.
+Define the boundary and decision owners. Create the manifest, provisional feature map, and unresolved-source queue. Review one path end to end to calibrate records, then complete the owner and feature discovery and batch source reviews. Reconcile historical deliverables and current intent sources separately. Publish a dated coverage report that exposes unreviewed features, source units, and unapproved requirements. Compare one real goal or customer expectation to the reviewed path and log the gap decision. Only then turn on recurring drift detection; it should update the queue, not claim automatic spec correctness.
 
-Expected outputs are a maintained source manifest, source review register, observation and requirement records, need and gap register, change-review history, generated reader view, and dated coverage report. If access, ownership, or approval is missing, publish the uncertainty rather than inventing an answer.
+Expected outputs are a maintained source manifest, provisional feature map, historical deliverable and requirement-source assessments, source review register, observation and requirement records, need and gap register, change-review history, generated reader view, and dated coverage report. If access, ownership, or approval is missing, publish the uncertainty rather than inventing an answer.
