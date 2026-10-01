@@ -10,7 +10,7 @@ Sanitized, portable copies of personal agent workflows. This repository is a sep
 - Evidence and delivery: messaging claims, portfolio reconciliation, knowledge-base workflows, catalog publishing, and prototypes.
 - Evaluation: artifact review, explicit feedback, calibration, regression analysis, and reporting.
 - Runtime workflows: scoped Cursor guidance, code review, and in-session monitoring.
-- Evidence-backed specifications: inventory an owned portfolio, maintain current-state and intended-behavior records, review source drift, and assess stakeholder gaps with [`evidence-backed-specs`](skills/evidence-backed-specs/SKILL.md).
+- Evidence-backed specifications: map owned features and source systems, reconcile historical delivery and current intended behavior, review source and intent drift, and assess stakeholder gaps with [`evidence-backed-specs`](skills/evidence-backed-specs/SKILL.md).
 
 Each skill lives under `skills/<name>/SKILL.md`. Cursor-specific skills target Cursor, even when read by another agent. The evaluation skills require the separate personal evaluation framework with `core/` and `plugin/rubrics/`; set `AI_EVALS_FRAMEWORK_DIR` to its checkout. That framework and its dependencies are not bundled here.
 
@@ -23,3 +23,15 @@ Planning, knowledge-base, document, and publishing workflows discover the tools 
 Review changes to these copies independently. Do not automatically synchronize an installed directory into this repository. If installing a selected skill, check for an existing skill with the same name and preserve the original before replacing it. Installing the whole collection may duplicate skills already provided by other sources.
 
 Updates use a feature branch and reviewed pull request. Keep private context outside this repository and review the full diff before any push.
+
+## Portable specification workflow
+
+Start with the [operating model](skills/evidence-backed-specs/references/operating-model.md) and [architecture](skills/evidence-backed-specs/references/architecture.md). The [artifact model](skills/evidence-backed-specs/references/artifact-model.md) and [illustrative schema](skills/evidence-backed-specs/references/record.schema.json) separate observed implementation, approved requirements, proposed needs, historical deliverables, verification stages, and gap decisions. [Change review](skills/evidence-backed-specs/references/change-loop.md), [evaluation](skills/evidence-backed-specs/references/evaluation.md), and the [porting guide](skills/evidence-backed-specs/references/porting-guide.md) cover maintenance and local adapters.
+
+The [generic example bundle](skills/evidence-backed-specs/examples/bundle.json) can be checked locally:
+
+```bash
+python3 skills/evidence-backed-specs/scripts/validate_bundle.py skills/evidence-backed-specs/examples/bundle.json
+```
+
+That script checks IDs, references, and coverage of the bundle's declared source, feature, and assessed-need scope. It does not inspect source systems, validate every schema field, establish the team's full ownership boundary, or judge evidence quality. Provide authenticated source readers, accountable reviewers, and a publication path in the target environment.

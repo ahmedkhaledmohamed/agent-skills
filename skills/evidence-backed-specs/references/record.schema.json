@@ -9,7 +9,11 @@
     {"$ref": "#/$defs/requirement"},
     {"$ref": "#/$defs/need"},
     {"$ref": "#/$defs/gap"},
-    {"$ref": "#/$defs/changeReview"}
+    {"$ref": "#/$defs/changeReview"},
+    {"$ref": "#/$defs/feature"},
+    {"$ref": "#/$defs/deliverable"},
+    {"$ref": "#/$defs/sourceAssessment"},
+    {"$ref": "#/$defs/verificationEvidence"}
   ],
   "$defs": {
     "text": {"type": "string", "minLength": 1},
@@ -118,7 +122,7 @@
         "kind": {"const": "gap"},
         "id": {"$ref": "#/$defs/text"},
         "needId": {"$ref": "#/$defs/text"},
-        "classification": {"enum": ["approvedRequirementConflict", "candidateDevelopmentGap", "specificationGap", "expectedVariation", "unverified"]},
+        "classification": {"enum": ["approvedRequirementConflict", "candidateDevelopmentGap", "specificationGap", "evidenceGap", "expectedVariation", "unverified"]},
         "relatedRequirementIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
         "relatedObservationIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
         "evidenceFor": {"type": "array", "items": {"$ref": "#/$defs/evidence"}},
@@ -127,6 +131,67 @@
         "decisionOwner": {"$ref": "#/$defs/text"},
         "nextVerification": {"$ref": "#/$defs/text"},
         "decisionStatus": {"enum": ["open", "accepted", "rejected", "superseded"]}
+      }
+    },
+    "feature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id", "title", "scopeStatus", "sourceUnitIds", "relatedRequirementIds", "relatedNeedIds", "coverageLimitations"],
+      "properties": {
+        "kind": {"const": "feature"},
+        "id": {"$ref": "#/$defs/text"},
+        "title": {"$ref": "#/$defs/text"},
+        "scopeStatus": {"enum": ["confirmed", "candidate", "adjacent", "disputed", "retired"]},
+        "sourceUnitIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+        "relatedRequirementIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+        "relatedNeedIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+        "coverageLimitations": {"type": "array", "items": {"$ref": "#/$defs/text"}}
+      }
+    },
+    "deliverable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id", "title", "period", "trackingStatus", "source", "candidateFeatureIds", "relatedRequirementIds", "deliveryStatus"],
+      "properties": {
+        "kind": {"const": "deliverable"},
+        "id": {"$ref": "#/$defs/text"},
+        "title": {"$ref": "#/$defs/text"},
+        "period": {"$ref": "#/$defs/text"},
+        "trackingStatus": {"$ref": "#/$defs/text"},
+        "source": {"$ref": "#/$defs/evidence"},
+        "candidateFeatureIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+        "relatedRequirementIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+        "deliveryStatus": {"enum": ["confirmed", "unverified", "notDelivered", "notApplicable"]},
+        "notes": {"type": "string"}
+      }
+    },
+    "sourceAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id", "source", "authorityStatus", "reviewedSections", "disposition", "relatedNeedIds", "relatedRequirementIds", "reviewedAt"],
+      "properties": {
+        "kind": {"const": "sourceAssessment"},
+        "id": {"$ref": "#/$defs/text"},
+        "source": {"$ref": "#/$defs/evidence"},
+        "authorityStatus": {"enum": ["approved", "proposed", "historical", "conflicting", "unknown"]},
+        "reviewedSections": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/text"}},
+        "disposition": {"$ref": "#/$defs/text"},
+        "relatedNeedIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+        "relatedRequirementIds": {"type": "array", "items": {"$ref": "#/$defs/text"}},
+        "reviewedAt": {"type": "string", "format": "date"}
+      }
+    },
+    "verificationEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id", "claimId", "stage", "evidence", "limitations"],
+      "properties": {
+        "kind": {"const": "verificationEvidence"},
+        "id": {"$ref": "#/$defs/text"},
+        "claimId": {"$ref": "#/$defs/text"},
+        "stage": {"enum": ["implementation", "enablement", "execution", "measurement", "outcome"]},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/evidence"}},
+        "limitations": {"type": "array", "items": {"$ref": "#/$defs/text"}}
       }
     },
     "changeReview": {
