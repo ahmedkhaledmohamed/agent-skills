@@ -12,3 +12,5 @@ Match the requested form: a short message can remain a paragraph; a decision mem
 If multiple audience versions are requested, derive them from the same evidence and preserve material qualifications in each.
 For a formal brief, planning template, presentation, or formatted document, use its applicable workflow instead of imposing a competing template.
 Return the usable text. Send or publish it only when authorized.
+
+Use the agreed actor/customer vocabulary consistently. Do not invent a new persona label for each task or replace a clear role with a broader ambiguous one. Shortening must preserve material conditions, exclusions and acceptance detail; restore detail when a concise statement becomes misleading.

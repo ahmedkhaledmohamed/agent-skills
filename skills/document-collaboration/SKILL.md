@@ -11,3 +11,5 @@ Read the original and collaborator edits before merging. Pull external content t
 Separate requested changes from questions, discussion, and conflicting feedback. Do not resolve comments or send replies unless requested.
 Inspect converters' data destinations. Prefer local processing for confidential material; external rendering or URL-ingestion services require authorization for that material.
 Use the relevant artifact skill for formatted documents, presentations, PDFs, or spreadsheets. Report the saved artifact or document URL and actual conversion limits.
+
+For tables, inspect every changed cell and its actual table/row placement; matching phrases or row counts alone do not verify insertion. Check real formatting, headings and links when readability matters. Preserve approved sections during repairs and verify replacements before removing originals. State when visual layout is unverified.
