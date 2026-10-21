@@ -8,6 +8,8 @@ Sanitized, portable copies of personal agent workflows. This repository is a sep
 
 Read [porting and workflow selection](PORTING.md) to choose a small skill set. Before making a repository public, complete the [publication review](PUBLICATION.md), including reachable history and remote surfaces.
 
+- Runtime targets and dependency groups: [catalog](catalog.json).
+- Behavioral cases and recorded-run review: [evaluation](evals/README.md).
 - Session startup and continuation: `workspace-context`.
 - Sustained authorized work and completion: `work-execution`.
 - Documents, spreadsheets and derived views: `artifact-reconciliation`.
