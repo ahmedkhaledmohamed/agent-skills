@@ -4,6 +4,14 @@ Sanitized, portable personal agent skills
 
 Sanitized, portable copies of personal agent workflows. This repository is a separate maintained collection, not a mirror of an installed skills directory.
 
+## Start here
+
+Read [porting and workflow selection](PORTING.md) to choose a small skill set. Before making a repository public, complete the [publication review](PUBLICATION.md), including reachable history and remote surfaces.
+
+- Session startup and continuation: `workspace-context`.
+- Sustained authorized work and completion: `work-execution`.
+- Documents, spreadsheets and derived views: `artifact-reconciliation`.
+
 ## Contents
 
 - Product work: analysis, briefs, writing, meeting preparation, strategy, and critical review.

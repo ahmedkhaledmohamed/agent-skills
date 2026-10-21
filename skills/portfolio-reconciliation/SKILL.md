@@ -13,3 +13,5 @@ A cancelled project does not cancel a shared capability gap. Check alternate del
 Separate additional-org tagging, requested contribution, and confirmed commitment. Do not assign owners or commitments from tags alone.
 Reconcile counts and discrepancies against source totals. Show a compact inventory summary plus unresolved coverage and changes; write narratives in direct product language.
 Do not mutate planning systems, trackers, classification decisions, or curated sheet order during a read-only reconciliation.
+
+Use meaningful titles beside IDs and verify record identities after user sorting or grouping. Reuse one underlying deliverable across multiple contribution homes. Link original and proposed job definitions so a reviewer can accept some changes within a request. Clearly distinguish confirmed continuation from a possible rollover; preserve cancellations specific to the delivery home.
