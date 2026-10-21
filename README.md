@@ -1,8 +1,8 @@
-# agent-skills
+# Portable agent workflows
 
-Sanitized, portable personal agent skills
+Reusable instructions for product research, evidence review, writing, artifact reconciliation and bounded execution. Select the workflows that fit your task and provide your own authorized sources and local policy.
 
-Sanitized, portable copies of personal agent workflows. This repository is a separate maintained collection, not a mirror of an installed skills directory.
+This repository is a separately maintained portable collection, not a mirror of an installed skills directory.
 
 ## Start here
 
@@ -43,3 +43,7 @@ python3 skills/evidence-backed-specs/scripts/validate_bundle.py skills/evidence-
 ```
 
 That script checks IDs, references, and coverage of the bundle's declared source, feature, and assessed-need scope. It does not inspect source systems, validate every schema field, establish the team's full ownership boundary, or judge evidence quality. Provide authenticated source readers, accountable reviewers, and a publication path in the target environment.
+
+## License and external dependencies
+
+Repository material is distributed under the [MIT License](LICENSE). Referenced tools, providers and external evaluation frameworks are separate dependencies with their own terms; this repository does not bundle or relicense them. Product names identify integration targets and do not imply endorsement or certification.
