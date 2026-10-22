@@ -8,6 +8,8 @@ This repository is a separately maintained portable collection, not a mirror of 
 
 Read [porting and workflow selection](PORTING.md) to choose a small skill set. Before making a repository public, complete the [publication review](PUBLICATION.md), including reachable history and remote surfaces.
 
+For reproducible workspace setup, use the [PM AI Partner Framework](https://github.com/ahmedkhaledmohamed/PM-AI-Partner-Framework). It distributes a selected reviewed bundle without requiring access to this repository. This collection owns workflow instructions; private content, local source bindings and credentials remain separate.
+
 - Session startup and continuation: `workspace-context`.
 - Sustained authorized work and completion: `work-execution`.
 - Documents, spreadsheets and derived views: `artifact-reconciliation`.
