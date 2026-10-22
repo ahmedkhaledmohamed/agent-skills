@@ -28,6 +28,12 @@ Supply local settings separately: repository/source locations, authorized connec
 
 ## Skill ownership and framework packaging
 
+The [PM AI Partner Framework setup guide](https://github.com/ahmedkhaledmohamed/PM-AI-Partner-Framework/blob/main/getting-started.md) owns the reproducible workspace setup process. Use its reviewed, self-contained skill bundle when you want to recreate a framework workspace; access to this source collection is not required. Check the commands available in the exact framework source/package you use: a source update does not publish an npm release.
+
+Keep three layers separate: reusable setup and workflow instructions; machine-local source/account bindings; and the private information accessed through those bindings. Recreating setup does not require packaging documents, work details, datasets, conversations or credentials. Leave that content in its existing local stores or connected services and authenticate the destination independently. An optional backup to a private repository is a separate owner decision.
+
+A framework setup recipe reproduces its declared baseline selection for the matching bundle. It does not capture home configuration, local instruction edits or every installed plugin. Modified workflows need review in their maintained source before they can become a reproducible shared snapshot. Source locations and service account configuration stay outside skill exports.
+
 This collection maintains portable skill content. The public PM framework may bundle a selected snapshot with file hashes so it works without access to this repository. A bundle is a reviewed export, not a live installation mirror or an automatic sync of local skills. Keep framework navigation, templates and installer behavior in the framework repository.
 
 New lessons belong here when they change decisions for a distinct repeatable task. Task-specific facts belong in the target workspace's working document. Inspect realistic inputs and observable outputs before broadening a rule; a correction in one project is not automatically a universal policy.
