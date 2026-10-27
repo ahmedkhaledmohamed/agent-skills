@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "note": "Selection and dependency inventory, not an installer or runtime certification. Local account/source mappings stay outside this collection.",
+  "groups": [
+    {
+      "id": "product",
+      "skills": [
+        "artifact-reconciliation",
+        "builder",
+        "competitor-analyst",
+        "data-analyst",
+        "devil-advocate",
+        "document-collaboration",
+        "evidence-backed-specs",
+        "hypothesis-tester",
+        "meeting-prep",
+        "planning-workflow",
+        "portfolio-reconciliation",
+        "product-brief",
+        "stakeholder-update",
+        "strategic-clarity",
+        "technical-analyst",
+        "thinking-trail",
+        "thought-partner",
+        "work-execution",
+        "workspace-context",
+        "writer"
+      ],
+      "runtimeTarget": "Runtime-neutral instructions",
+      "requirements": [
+        "Task-relevant sources and reviewer authority; no universal connector requirement."
+      ],
+      "verification": "Instructions reviewed; validate the selected runtime and actual task outcome in the target environment."
+    },
+    {
+      "id": "cursor",
+      "skills": [
+        "cursor-automations",
+        "cursor-canvas",
+        "cursor-cli-config",
+        "cursor-create-hook",
+        "cursor-create-rule",
+        "cursor-create-skill",
+        "cursor-create-subagent",
+        "cursor-env-setup",
+        "cursor-migrate-to-builds",
+        "cursor-migrate-to-skills",
+        "cursor-onboard",
+        "cursor-sdk",
+        "cursor-settings",
+        "cursor-statusline"
+      ],
+      "runtimeTarget": "Cursor",
+      "requirements": [
+        "Installed Cursor capabilities required by the selected skill; another agent must not substitute its own runtime."
+      ],
+      "verification": "Instructions reviewed; validate the selected runtime and actual task outcome in the target environment."
+    },
+    {
+      "id": "evaluation",
+      "skills": [
+        "eval-feedback",
+        "eval-judge",
+        "eval-reporter",
+        "eval-runner",
+        "source-command-eval-calibrate",
+        "source-command-eval-check",
+        "source-command-eval-improve",
+        "source-command-eval-regression",
+        "source-command-eval-report"
+      ],
+      "runtimeTarget": "Per-skill; execution adapters currently target the external evaluation framework",
+      "requirements": [
+        "For framework-backed evaluation commands: a separately configured evaluation framework with core/ and plugin/rubrics/.",
+        "Semantic judge runs additionally need the supported configured CLI/provider; feedback capture alone does not imply paid inference."
+      ],
+      "verification": "Instructions reviewed; validate the selected runtime and actual task outcome in the target environment."
+    },
+    {
+      "id": "knowledge",
+      "skills": [
+        "delivery-status",
+        "knowledge-health",
+        "knowledge-research",
+        "knowledge-search"
+      ],
+      "runtimeTarget": "Runtime-neutral instructions",
+      "requirements": [
+        "An authorized knowledge corpus or source readers; current delivery claims need live tracking evidence."
+      ],
+      "verification": "Instructions reviewed; validate the selected runtime and actual task outcome in the target environment."
+    },
+    {
+      "id": "optional-workflows",
+      "skills": [
+        "catalog-publishing",
+        "deploy-prototype",
+        "loop",
+        "messaging-evidence-review",
+        "prototype",
+        "review-bugbot",
+        "review-security"
+      ],
+      "runtimeTarget": "Per-skill",
+      "requirements": [
+        "Publishing/prototype destinations, review providers, code/data readers or wait mechanisms as required by the selected skill; inspect that skill before use."
+      ],
+      "verification": "Instructions reviewed; validate the selected runtime and actual task outcome in the target environment."
+    }
+  ]
+}

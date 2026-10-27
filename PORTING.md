@@ -37,3 +37,23 @@ A framework setup recipe reproduces its declared baseline selection for the matc
 This collection maintains portable skill content. The public PM framework may bundle a selected snapshot with file hashes so it works without access to this repository. A bundle is a reviewed export, not a live installation mirror or an automatic sync of local skills. Keep framework navigation, templates and installer behavior in the framework repository.
 
 New lessons belong here when they change decisions for a distinct repeatable task. Task-specific facts belong in the target workspace's working document. Inspect realistic inputs and observable outputs before broadening a rule; a correction in one project is not automatically a universal policy.
+
+## Incorporate a lesson
+
+Use an observed failure or repeated friction, not a hypothetical preference, as the input. Identify what decision would have changed and choose the smallest maintained home:
+
+| Lesson | Maintained home |
+| --- | --- |
+| A changing fact or one task's accepted decision | Existing task document |
+| A personal preference or account/authorization policy | Local user instructions |
+| A repository convention | That repository's instructions |
+| A procedure that generalizes to a repeated user goal | The relevant skill |
+| A demonstrated failure or important decision boundary | A behavioral case, alongside the narrow correction |
+
+Record the observation and proposed placement in the existing task's review, make a focused change, and check the same representative input before and after. One incident does not automatically justify a global prohibition or a new skill. Preserve the user's approval requirements; do not rewrite global instructions or synchronize installed directories automatically.
+
+## Check a workflow change
+
+[Behavioral cases](evals/README.md) provide fictional inputs, expected observable actions and reviewer criteria. The checker scores normalized recorded observations with linked trace evidence; it does not run a model or independently interpret prose. Keep the same cases when comparing versions and report unavailable cases. Evaluator unit tests are synthetic checks of the checker, not successful agent executions.
+
+[Skill groups](catalog.json) identify runtime targets and external dependencies without duplicating skill descriptions. Generic guidance is not a guarantee that a connector or editor version works in a particular environment.
