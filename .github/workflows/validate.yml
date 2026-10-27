@@ -1,0 +1,19 @@
+name: Validate portable workflows
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.13'
+      - run: python3 scripts/check_portability.py .
+      - run: python3 scripts/evaluate_behavior.py --check
+      - run: python3 -m unittest discover -s tests
+      - run: python3 skills/evidence-backed-specs/scripts/validate_bundle.py skills/evidence-backed-specs/examples/bundle.json
