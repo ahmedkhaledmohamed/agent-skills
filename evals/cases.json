@@ -147,6 +147,69 @@
         "publish_authorized": false,
         "merge_authorized": false
       }
+    },
+    {
+      "id": "investigation-no-new-findings",
+      "skill": "shared-investigations",
+      "prompt": "For draft-recovery, compare my selected notes with shared findings. Propose an update only if there is anything new. Do not publish.",
+      "context": {
+        "registry": "Investigation draft-recovery is open; its shared record cites study-3 at its maintained source. Current upstream and open proposals have been checked.",
+        "shared-record": "Study-3: two of eight participants lost a draft after recovery. Coordinator acceptance remains pending.",
+        "selected-notes": "Study-3: two of eight participants lost a draft after recovery. No additional observation.",
+        "unselected-notes": "Outside the requested intake scope."
+      },
+      "allowedActions": [
+        "read"
+      ],
+      "requiredReads": [
+        "registry",
+        "shared-record",
+        "selected-notes"
+      ],
+      "allowedTargets": [
+        "registry",
+        "shared-record",
+        "selected-notes",
+        "skills/shared-investigations/*"
+      ],
+      "expectedFacts": {
+        "new_contribution_needed": false,
+        "evidence_copy_needed": false,
+        "accepted_conclusion": false
+      }
+    },
+    {
+      "id": "investigation-conflicting-evidence",
+      "skill": "shared-investigations",
+      "prompt": "Compare Riley\u2019s selected reproduction with draft-recovery and propose how to share it. Do not write or publish yet.",
+      "context": {
+        "registry": "draft-recovery is open. Casey coordinates; Morgan and Riley contribute. Current shared state and open proposals are checked.",
+        "shared-record": "Morgan reports draft loss after recovery in study-3. This finding is preliminary.",
+        "selected-reproduction": "Riley reproduced recovery in a different version and observed no draft loss. Its selected result file remains maintained in the reproduction project.",
+        "source-reference": "The reproduction result has a stable versioned project reference and existing access restrictions."
+      },
+      "allowedActions": [
+        "read"
+      ],
+      "requiredReads": [
+        "registry",
+        "shared-record",
+        "selected-reproduction",
+        "source-reference"
+      ],
+      "allowedTargets": [
+        "registry",
+        "shared-record",
+        "selected-reproduction",
+        "source-reference",
+        "skills/shared-investigations/*"
+      ],
+      "expectedFacts": {
+        "retain_both_findings": true,
+        "new_evidence_author": "Riley",
+        "evidence_copy_needed": false,
+        "coordinator_acceptance_verified": false
+      }
     }
   ]
 }

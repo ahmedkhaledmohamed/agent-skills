@@ -63,7 +63,7 @@ class RecordedObservationChecks(unittest.TestCase):
         case = self.cases["missing-focus"]
         results = behavior.score(list(self.cases.values()), [self.record(case)], self.root)
         self.assertEqual(sum(r["status"] == "pass" for r in results), 1)
-        self.assertEqual(sum(r["status"] == "unverified" for r in results), 6)
+        self.assertEqual(sum(r["status"] == "unverified" for r in results), len(self.cases) - 1)
 
     def test_catalog_covers_actual_skills(self):
         self.assertGreater(behavior.check_catalog(), 0)

@@ -13,6 +13,7 @@
 | Investigate product measurements | [data-analyst](skills/data-analyst/SKILL.md) |
 | Compare competing solutions | [competitor-analyst](skills/competitor-analyst/SKILL.md) |
 | Design or interpret an experiment | [hypothesis-tester](skills/hypothesis-tester/SKILL.md) |
+| Collaborate on an investigation without duplicating maintained evidence | [shared-investigations](skills/shared-investigations/SKILL.md) |
 | Record material contribution safely | [thinking-trail](skills/thinking-trail/SKILL.md) |
 | Review documents and collaborator changes | [document-collaboration](skills/document-collaboration/SKILL.md) |
 

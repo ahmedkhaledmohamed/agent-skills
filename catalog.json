@@ -106,6 +106,17 @@
         "Publishing/prototype destinations, review providers, code/data readers or wait mechanisms as required by the selected skill; inspect that skill before use."
       ],
       "verification": "Instructions reviewed; validate the selected runtime and actual task outcome in the target environment."
+    },
+    {
+      "id": "shared-investigations",
+      "skills": [
+        "shared-investigations"
+      ],
+      "runtimeTarget": "Runtime-neutral instructions; offline checker uses Node.js 18+",
+      "requirements": [
+        "An authorized shared repository or equivalent review workflow, named coordinator and source readers selected by each contributor. No universal connector or knowledge index requirement."
+      ],
+      "verification": "Record validation is deterministic; actual agent discovery, source access and collaborator review need a local pilot."
     }
   ]
 }
