@@ -1,6 +1,6 @@
 # Evaluate workflow behavior
 
-`cases.json` contains seven independently fictional scenarios: missing focus, a narrow task, scoped continuation, conflicting authority, absent events, document readback and action-specific approval. They test decisions and consequential actions rather than prescribed headings or exact prose.
+`cases.json` contains independently fictional scenarios: missing focus, a narrow task, scoped continuation, conflicting authority, absent events, document readback action-specific approval, unchanged investigation intake and conflicting investigation evidence. They test decisions and consequential actions rather than prescribed headings or exact prose.
 
 The evaluator uses Python 3.9+ and its standard library. No external evaluation framework, account or model is needed to validate definitions or review recorded runs. The older evaluation skills remain optional adapters to their separately configured framework.
 
@@ -11,7 +11,7 @@ python3 scripts/evaluate_behavior.py --check
 python3 -m unittest discover -s tests
 ```
 
-Unit tests use synthetic observations to check the evaluator's failure handling. They do not demonstrate skill quality or runtime compatibility. No model is invoked by either command.
+Unit tests use synthetic observations to check the evaluator's failure handling. They do not demonstrate skill quality or runtime compatibility. No model is invoked by either command. The investigation reference checker has separate deterministic tests: `node --test tests/shared-investigations.test.cjs`.
 
 ## Run a behavioral case
 

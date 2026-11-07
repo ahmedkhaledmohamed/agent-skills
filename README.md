@@ -13,6 +13,7 @@ For reproducible workspace setup, use the [PM AI Partner Framework](https://gith
 - Runtime targets and dependency groups: [catalog](catalog.json).
 - Behavioral cases and recorded-run review: [evaluation](evals/README.md).
 - Session startup and continuation: `workspace-context`.
+- Collaborative investigations and attributed evidence intake: `shared-investigations`.
 - Sustained authorized work and completion: `work-execution`.
 - Documents, spreadsheets and derived views: `artifact-reconciliation`.
 
